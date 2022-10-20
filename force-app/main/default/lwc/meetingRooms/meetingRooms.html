@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Meeting Rooms">
+        <ul>
+            <template for:each={meetingRooms} for:item="room">
+                <li key={room.roomName} style="padding: 10px">
+                    <c-meeting-room meeting-room-info={room}
+                        show-room-info={showRoomInfo}></c-meeting-room>
+                </li>
+            </template>
+        </ul>
+        <lightning-card title="Show information">
+            <lightning-button type="checkbox" onchange={showRoomInfoToggle}></lightning-button>
+        </lightning-card>
+    </lightning-card>
+</template>
